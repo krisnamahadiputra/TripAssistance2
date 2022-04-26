@@ -3,6 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TripAssistance-main/app/src/main/res/drawable/bg_circle_radius_primary.xml" value="0.1675" />
+        <entry key="..\:/TripAssistance-main/app/src/main/res/layout/activity_detail_kuliner.xml" value="0.2" />
+        <entry key="..\:/TripAssistance-main/app/src/main/res/layout/activity_kuliner.xml" value="0.2" />
+        <entry key="..\:/TripAssistance-main/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/TripAssistance-main/app/src/main/res/layout/header.xml" value="0.22" />
+        <entry key="..\:/TripAssistance-main/app/src/main/res/layout/item_list_kuliner.xml" value="0.2" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/drawable/ic_banner.xml" value="0.179" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/layout/header.xml" value="0.2" />

@@ -17,8 +17,8 @@
         android:layout_height="match_parent"
         android:layout_marginTop="150dp"
         android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="50dp"
-                    app:cardCornerRadius="15dp"
+                    app:cardCornerRadius="5dp"
                     app:cardUseCompatPadding="true">
 
                     <LinearLayout
@@ -51,12 +51,12 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="147dp"
+                                android:layout_marginStart="130dp"
                                 android:singleLine="true"
-                                android:text="Destinasi Wisata"
-                                android:fontFamily="sans-serif-condensed-medium"
+                                android:text="Destinasi Wisata Bali"
                                 android:textColor="@android:color/black"
-                                android:textSize="20sp"/>
+                                android:textSize="16sp"
+                                android:textStyle="bold"/>
                         </LinearLayout>
                         
                         <LinearLayout
@@ -86,15 +86,15 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="40dp"
-                app:cardCornerRadius="15dp">
+                android:layout_marginStart="30dp"
+                app:cardCornerRadius="5dp">
                 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="10dp"
                     android:scaleType="centerCrop"
-                    android:scr="@drawable/bali" />
+                    android:scr="@drawable/ic_tour" />
             </androidx.cardview.widget.CardView>
             
         </FrameLayout>
