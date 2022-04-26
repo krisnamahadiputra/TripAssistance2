@@ -48,6 +48,15 @@ public class WisataActivity extends AppCompatActivity implements ReligiAdapter.o
         getReligi();
     }
 
+    private void getReligi() {
+
+    @Override
+    public void onSelected(ModelWisata modelWisata) {
+        Intent intent = new Intent(WisataActivity.this, DetailWisataActivity.class);
+        intent.putExtra("detailWisata", modelWisata);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
