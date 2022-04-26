@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Dell/TripAssistance-main/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.121" />
+        <entry key="..\:/Dell/TripAssistance-main/app/src/main/res/drawable/ic_launcher_background.xml" value="0.121" />
+        <entry key="..\:/Dell/TripAssistance-main/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Dell/TripAssistance-main/app/src/main/res/layout/activity_wisata.xml" value="0.12" />
+        <entry key="..\:/Dell/TripAssistance-main/app/src/main/res/layout/detail_wisata.xml" value="0.1" />
+        <entry key="..\:/Dell/TripAssistance-main/app/src/main/res/layout/header.xml" value="0.1" />
+        <entry key="..\:/Dell/TripAssistance-main/app/src/main/res/layout/list_wisata.xml" value="0.1" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/drawable/ic_banner.xml" value="0.179" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/layout/header.xml" value="0.152" />
