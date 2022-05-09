@@ -11,6 +11,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.kuliah.tripassistance.ornament.OrnamentLayoutMargin;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -21,7 +23,7 @@ import java.util.List;
 public class WisataActivity extends AppCompatActivity implements ReligiAdapter.onSelectData {
 
     RecyclerView rvReligi;
-    LayoutMarginDecoration gridMargin;
+    OrnamentLayoutMargin gridMargin;
     ReligiAdapter kulinerAdapter;
     List<ModelReligi> modelKuliner = new ArrayList<>();
     Toolbar tbReligi;
@@ -41,7 +43,7 @@ public class WisataActivity extends AppCompatActivity implements ReligiAdapter.o
         GridLayoutManager mLayoutManager = new GridLayoutManager(this,
                 2, RecyclerView.VERTICAL, false);
         rvReligi.setLayoutManager(mLayoutManager);
-        gridMargin = new LayoutMarginDecoration(2, Tools.dp2px(this, 4));
+        gridMargin = new OrnamentLayoutMargin(2, Tools.dp2px(this, 4));
         rvReligi.addItemDecoration(gridMargin);
         rvReligi.setHasFixedSize(true);
 
