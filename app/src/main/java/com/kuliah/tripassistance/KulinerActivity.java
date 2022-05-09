@@ -9,10 +9,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.kuliah.tripassistance.adapter.KulinerAdapter;
+import com.kuliah.tripassistance.model.ModelKuliner;
+import java.util.ArrayList;
+import java.util.List;
 
-public class KulinerActivity extends AppCompatActivity {
+public class KulinerActivity extends AppCompatActivity implements KulinerAdapter.onSelectData {
+
     RecyclerView rvKuliner;
+    KulinerAdapter kulinerAdapter;
     ProgressDialog progressDialog;
+    List<ModelKuliner> modelKuliner = new ArrayList<>();
     Toolbar tbKuliner;
 
     @Override
@@ -21,7 +28,7 @@ public class KulinerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_kuliner);
 
         tbKuliner = findViewById(R.id.toolbar_kuliner);
-        tbKuliner.setTitle("Daftar Kuliner Purwakarta");
+        tbKuliner.setTitle("Daftar Kuliner Bali");
         setSupportActionBar(tbKuliner);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -36,7 +43,20 @@ public class KulinerActivity extends AppCompatActivity {
                 2, RecyclerView.VERTICAL, false);
         rvKuliner.setLayoutManager(mLayoutManager);
         rvKuliner.setHasFixedSize(true);
+
     };
+
+    private void showKuliner() {
+        kulinerAdapter = new KulinerAdapter(KulinerActivity.this, modelKuliner, this);
+        rvKuliner.setAdapter(kulinerAdapter);
+    }
+
+    @Override
+    public void onSelected(ModelKuliner modelKuliner) {
+        Intent intent = new Intent(KulinerActivity.this, DetailKulinerActivity.class);
+        intent.putExtra("detailKuliner", modelKuliner);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -46,6 +66,5 @@ public class KulinerActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 }
