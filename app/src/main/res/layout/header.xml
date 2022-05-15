@@ -84,20 +84,6 @@
                 </androidx.cardview.widget.CardView>
                 
             </LinearLayout>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="30dp"
-                app:cardCornerRadius="5dp">
-                
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:padding="10dp"
-                    android:scaleType="centerCrop"
-                    android:scr="@drawable/tour_sign" />
-            </androidx.cardview.widget.CardView>
             
         </FrameLayout>
         
