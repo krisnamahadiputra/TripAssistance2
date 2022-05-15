@@ -9,12 +9,10 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.kuliah.tripassistance.adapter.WisataAdapter;
+import com.kuliah.tripassistance.model.ModelWisata;
+import com.kuliah.tripassistance.ornament.OrnamentLayoutMargin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +20,12 @@ import java.util.List;
 public class WisataActivity extends AppCompatActivity implements WisataAdapter.onSelectData {
 
     RecyclerView rvWisata;
-    LayoutMarginDecoration gridMargin;
-    WisataAdapter kulinerAdapter;
+    OrnamentLayoutMargin gridMargin;
+    WisataAdapter wisataAdapter;
     ProgressDialog progressDialog;
-    List<ModelWisata> modelKuliner = new ArrayList<>();
+    List<ModelWisata> modelWisata = new ArrayList<>();
     Toolbar tbWisata;
+    private Object WisataAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,7 @@ public class WisataActivity extends AppCompatActivity implements WisataAdapter.o
         setContentView(R.layout.activity_wisata);
 
         tbWisata = findViewById(R.id.toolbar_wisata);
-        tbWisata.setTitle("Daftar Wisata Purwakarta");
+        tbWisata.setTitle("Daftar Wisata Bali");
         setSupportActionBar(tbWisata);
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -48,18 +47,17 @@ public class WisataActivity extends AppCompatActivity implements WisataAdapter.o
         GridLayoutManager mLayoutManager = new GridLayoutManager(this,
                 2, RecyclerView.VERTICAL, false);
         rvWisata.setLayoutManager(mLayoutManager);
-        gridMargin = new LayoutMarginDecoration(2, Tools.dp2px(this, 4));
+        gridMargin = new OrnamentLayoutMargin(2, Tools.dp2px(this, 4));
         rvWisata.addItemDecoration(gridMargin);
         rvWisata.setHasFixedSize(true);
 
-        getWisata();
     }
 
 
 
     private void showWisata() {
-        kulinerAdapter = new WisataAdapter(WisataActivity.this, modelKuliner, this);
-        rvWisata.setAdapter(kulinerAdapter);
+        wisataAdapter = new WisataAdapter(WisataActivity.this, modelWisata, this);
+        rvWisata.setAdapter(wisataAdapter);
     }
 
     @Override
