@@ -11,12 +11,15 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.kuliah.tripassistance.adapter.ReligiAdapter;
 import com.kuliah.tripassistance.model.ModelReligi;
+import com.kuliah.tripassistance.ornament.OrnamentLayoutMargin;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReligiActivity extends AppCompatActivity implements ReligiAdapter.onSelectData {
 
     RecyclerView rvReligi;
+    OrnamentLayoutMargin gridMargin;
     ReligiAdapter religiAdapter;
     ProgressDialog progressDialog;
     List<ModelReligi> modelReligi = new ArrayList<>();
@@ -42,6 +45,8 @@ public class ReligiActivity extends AppCompatActivity implements ReligiAdapter.o
         GridLayoutManager mLayoutManager = new GridLayoutManager(this,
                 2, RecyclerView.VERTICAL, false);
         rvReligi.setLayoutManager(mLayoutManager);
+        gridMargin = OrnamentLayoutMargin(2, Tools.dp2px(this, 4));
+        rvReligi.addItemDecoration(gridMargin);
         rvReligi.setHasFixedSize(true);
 
     };
