@@ -1,31 +1,25 @@
 package com.kuliah.tripassistance;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
-
-import com.kuliah.tripassistance.ornament.OrnamentLayoutMargin;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.kuliah.tripassistance.adapter.ReligiAdapter;
+import com.kuliah.tripassistance.model.ModelReligi;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WisataActivity extends AppCompatActivity implements ReligiAdapter.onSelectData {
+public class ReligiActivity extends AppCompatActivity implements ReligiAdapter.onSelectData {
 
     RecyclerView rvReligi;
-    OrnamentLayoutMargin gridMargin;
-    ReligiAdapter kulinerAdapter;
-    List<ModelReligi> modelKuliner = new ArrayList<>();
+    ReligiAdapter religiAdapter;
+    ProgressDialog progressDialog;
+    List<ModelReligi> modelReligi = new ArrayList<>();
     Toolbar tbReligi;
 
     @Override
@@ -39,23 +33,28 @@ public class WisataActivity extends AppCompatActivity implements ReligiAdapter.o
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setTitle("Mohon Tunggu");
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Sedang menampilkan data...");
+
         rvReligi = findViewById(R.id.rvReligi);
         GridLayoutManager mLayoutManager = new GridLayoutManager(this,
                 2, RecyclerView.VERTICAL, false);
         rvReligi.setLayoutManager(mLayoutManager);
-        gridMargin = new OrnamentLayoutMargin(2, Tools.dp2px(this, 4));
-        rvReligi.addItemDecoration(gridMargin);
         rvReligi.setHasFixedSize(true);
 
-        getReligi();
+    };
+
+    private void showReligi() {
+        religiAdapter = new ReligiAdapter(ReligiActivity.this, modelReligi, this);
+        rvReligi.setAdapter(religiAdapter);
     }
 
-    private void getReligi() {
-
     @Override
-    public void onSelected(ModelWisata modelWisata) {
-        Intent intent = new Intent(WisataActivity.this, DetailWisataActivity.class);
-        intent.putExtra("detailWisata", modelWisata);
+    public void onSelected(ModelReligi modelReligi) {
+        Intent intent = new Intent(ReligiActivity.this, DetailReligiActivity.class);
+        intent.putExtra("detailReligi", modelReligi);
         startActivity(intent);
     }
 
@@ -67,4 +66,6 @@ public class WisataActivity extends AppCompatActivity implements ReligiAdapter.o
         }
         return super.onOptionsItemSelected(item);
     }
+
 }
+
