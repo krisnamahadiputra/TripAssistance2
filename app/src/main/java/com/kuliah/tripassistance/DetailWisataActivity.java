@@ -12,6 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.kuliah.tripassistance.model.ModelWisata;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,7 +23,7 @@ public class DetailWisataActivity extends AppCompatActivity {
     TextView tvNamaWisata, tvDescWisata;
     ImageView imgWisata;
     String idWisata, NamaWisata, Desc;
-    TextView modelWisata;
+    ModelWisata modelWisata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class DetailWisataActivity extends AppCompatActivity {
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        modelWisata = () getIntent().getSerializableExtra("detailWisata");
+        modelWisata = (ModelWisata) getIntent().getSerializableExtra("detailWisata");
         if (modelWisata != null) {
             idWisata = modelWisata.getIdWisata();
             NamaWisata = modelWisata.getTxtNamaWisata();
@@ -49,9 +50,7 @@ public class DetailWisataActivity extends AppCompatActivity {
             Glide.with(this)
                     .load(modelWisata.getGambarWisata())
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
-                    .into(imgWisata);
-
-            getDetailWisata();
+                    .into(imgWisata);;
         }
     }
 
