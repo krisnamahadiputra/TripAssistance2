@@ -19,7 +19,7 @@ public class ModelMain {
     public void setIcon_layanan(int icon_layanan) {
         this.icon_layanan = icon_layanan;
     }
-
+}
     /*
     public ModelMain(String txtName, int imgSrc) {
         this.txtName = txtName;
@@ -43,4 +43,3 @@ public class ModelMain {
     }
 
      */
-}

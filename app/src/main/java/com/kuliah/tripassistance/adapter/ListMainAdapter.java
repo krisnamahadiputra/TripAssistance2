@@ -1,22 +1,17 @@
 package com.kuliah.tripassistance.adapter;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.kuliah.tripassistance.R;
 import com.kuliah.tripassistance.model.ModelMain;
-
 import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,19 +25,20 @@ public class ListMainAdapter extends RecyclerView.Adapter<ListMainAdapter.ListVi
     @NonNull
     @Override
     public ListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.grid_main, parent, false);
+        View view = LayoutInflater
+                .from(parent.getContext())
+                .inflate(R.layout.grid_main, parent, false);
         return new ListViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-        ModelMain modelMain = listLayanan.get(position);
+        ModelMain modelMain = listLayanan.get(  position);
         Glide.with(holder.itemView.getContext())
                 .load(modelMain.getIcon_layanan())
                 .apply(new RequestOptions().override(55, 55))
                 .into(holder.imgMainData);
         holder.tvMainData.setText(modelMain.getNama_layanan());
-
     }
 
     @Override

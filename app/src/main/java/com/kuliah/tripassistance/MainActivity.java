@@ -1,15 +1,11 @@
 package com.kuliah.tripassistance;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
-
 import com.kuliah.tripassistance.adapter.ListMainAdapter;
 import com.kuliah.tripassistance.model.ModelMain;
 import com.kuliah.tripassistance.model.ModelMainData;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,3 +29,5 @@ public class MainActivity extends AppCompatActivity {
         rvLayanan.setAdapter(listMainAdapter);
     }
 }
+
+
