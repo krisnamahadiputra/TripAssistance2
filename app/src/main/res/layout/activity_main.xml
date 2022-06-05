@@ -15,6 +15,13 @@
             android:orientation="vertical">
 
             <include layout="@layout/header" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tes"
+                android:id="@+id/buttonTes">
+            </Button>
             
             <TextView
                 android:layout_width="wrap_content"
