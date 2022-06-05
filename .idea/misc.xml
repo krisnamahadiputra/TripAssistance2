@@ -3,9 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/activity_wisata.xml" value="0.1796875" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/detail_wisata.xml" value="0.1796875" />
-        <entry key="..\:/Users/DELL/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/list_wisata.xml" value="0.1796875" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/drawable/ic_banner.xml" value="0.179" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/layout/activity_detail_kuliner.xml" value="0.259375" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/layout/activity_detail_religi.xml" value="0.259375" />
@@ -16,6 +13,17 @@
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/layout/detail_wisata.xml" value="0.259375" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/layout/grid_main.xml" value="0.2" />
         <entry key="..\:/Users/DIP/TripAssistance/app/src/main/res/layout/header.xml" value="0.152" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/activity_detail_kuliner.xml" value="0.22" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/activity_detail_religi.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/activity_kuliner.xml" value="0.184375" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/activity_list_religi.xml" value="0.1" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/activity_login.xml" value="0.184375" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/activity_main.xml" value="0.184375" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/activity_religi.xml" value="0.1" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/grid_main.xml" value="0.22" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/header.xml" value="0.184375" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/item_list_kuliner.xml" value="0.184375" />
+        <entry key="..\:/Users/Tata Nofera/AndroidStudioProjects/TripAssistance2/app/src/main/res/layout/item_list_religi.xml" value="0.184375" />
       </map>
     </option>
   </component>
