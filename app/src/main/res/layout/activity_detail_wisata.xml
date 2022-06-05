@@ -42,7 +42,7 @@
                             android:layout_height="wrap_content">
 
                             <ImageView
-                                android:id="@+id/fotoReligi"
+                                android:id="@+id/fotoWisata"
                                 android:layout_width="match_parent"
                                 android:layout_height="250dp"
                                 android:scaleType="fitXY"
@@ -63,7 +63,7 @@
                             android:layout_margin="10dp">
 
                             <TextView
-                                android:id="@+id/tvNamaReligi"
+                                android:id="@+id/tvNamaWisata"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_centerInParent="true"
@@ -71,7 +71,7 @@
                                 android:layout_marginStart="10dp"
                                 android:gravity="center_vertical"
                                 android:fontFamily="@font/poppinsbold"
-                                android:text="Pura Besakih"
+                                android:text="Savana Tianyar"
                                 android:textSize="30sp" />
 
                         </LinearLayout>
@@ -82,7 +82,7 @@
                             android:layout_margin="10dp">
 
                             <TextView
-                                android:id="@+id/tvDescReligi"
+                                android:id="@+id/tvDescWisata"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
@@ -91,7 +91,7 @@
                                 android:gravity="center_vertical"
                                 android:justificationMode="inter_word"
                                 android:fontFamily="@font/poppinsreg"
-                                android:text="Pura Besakih"
+                                android:text="Savana Tianyar"
                                 android:textSize="14sp" />
 
                         </LinearLayout>

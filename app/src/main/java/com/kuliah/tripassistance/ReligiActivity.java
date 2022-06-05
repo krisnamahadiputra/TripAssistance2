@@ -8,7 +8,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
+import android.widget.SearchView;
 
 import com.kuliah.tripassistance.adapter.ListReligiAdapter;
 import com.kuliah.tripassistance.model.ModelReligi;
