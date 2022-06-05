@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.kuliah.tripassistance.adapter.ListMainAdapter;
 import com.kuliah.tripassistance.model.ModelMain;
@@ -26,6 +29,15 @@ public class MainActivity extends AppCompatActivity {
 
         list.addAll(ModelMainData.getListData());
         showRecyclerList();
+
+        Button tes = findViewById(R.id.buttonTes);
+        tes.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent inten = new Intent(MainActivity.this, ReligiActivity.class);
+                startActivity(inten);
+            }
+        });
     }
     private void showRecyclerList(){
         rvLayanan.setLayoutManager(new LinearLayoutManager(this));
