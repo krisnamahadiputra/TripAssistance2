@@ -18,6 +18,12 @@ import java.util.List;
 public class ListMainAdapter extends RecyclerView.Adapter<ListMainAdapter.ListViewHolder> {
     private ArrayList<ModelMain> listLayanan;
 
+    private OnItemClickCallback onItemClickCallback;
+
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback){
+        this.onItemClickCallback = onItemClickCallback;
+    }
+
     public ListMainAdapter(ArrayList<ModelMain> list) {
         this.listLayanan = list;
     }
@@ -39,6 +45,13 @@ public class ListMainAdapter extends RecyclerView.Adapter<ListMainAdapter.ListVi
                 .apply(new RequestOptions().override(55, 55))
                 .into(holder.imgMainData);
         holder.tvMainData.setText(modelMain.getNama_layanan());
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onItemClickCallback.onItemClicked(listLayanan.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -57,6 +70,9 @@ public class ListMainAdapter extends RecyclerView.Adapter<ListMainAdapter.ListVi
             tvMainData = itemView.findViewById(R.id.tvMainData);
             cvMainData = itemView.findViewById(R.id.cvMainData);
         }
+    }
+    public interface OnItemClickCallback{
+        void onItemClicked(ModelMain data);
     }
 }
 /*

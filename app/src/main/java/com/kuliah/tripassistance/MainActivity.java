@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.kuliah.tripassistance.adapter.ListMainAdapter;
 import com.kuliah.tripassistance.model.ModelMain;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
         list.addAll(ModelMainData.getListData());
         showRecyclerList();
-
+        /*
         Button tes = findViewById(R.id.buttonTes);
         tes.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -38,10 +39,37 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(inten);
             }
         });
+         */
     }
     private void showRecyclerList(){
         rvLayanan.setLayoutManager(new LinearLayoutManager(this));
         ListMainAdapter listMainAdapter = new ListMainAdapter(list);
         rvLayanan.setAdapter(listMainAdapter);
+
+        listMainAdapter.setOnItemClickCallback(new ListMainAdapter.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(ModelMain data) {
+                showSelectedLayanan(data);
+
+                /*
+                Intent moveIntent = new Intent(MainActivity.this, ReligiActivity.class);
+                startActivity(moveIntent);
+                 */
+
+                if(data.getNama_layanan().equals("Wisata Religi")){
+                    Intent religiIntent = new Intent(MainActivity.this, ReligiActivity.class);
+                    startActivity(religiIntent);
+                }
+                if(data.getNama_layanan().equals("Wisata Alam")){
+                    Intent alamIntent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(alamIntent);
+                }
+
+            }
+        });
     }
+    private void showSelectedLayanan(ModelMain modelMain){
+        Toast.makeText(this,"Anda memilih " + modelMain.getNama_layanan(),Toast.LENGTH_SHORT).show();
+    }
+
 }
