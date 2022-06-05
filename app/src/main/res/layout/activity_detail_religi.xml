@@ -44,9 +44,9 @@
                             <ImageView
                                 android:id="@+id/fotoReligi"
                                 android:layout_width="match_parent"
-                                android:layout_height="244dp"
+                                android:layout_height="250dp"
                                 android:scaleType="fitXY"
-                                android:src="@drawable/bali"/>
+                                android:src="@drawable/bali" />
 
                         </RelativeLayout>
 
